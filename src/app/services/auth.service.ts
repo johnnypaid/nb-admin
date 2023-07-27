@@ -25,4 +25,12 @@ export class AuthService {
   logout(): Observable<any> {
     return this.httpClient.post(`${environment.api}/logout`, {});
   }
+
+  updateInfo(data: any): Observable<User> {
+    return this.httpClient.put<User>(`${environment.api}/users/info`, data);
+  }
+
+  updatePassword(data: any): Observable<User> {
+    return this.httpClient.put<User>(`${environment.api}/users/info`, data);
+  }
 }
