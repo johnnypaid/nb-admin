@@ -8,6 +8,7 @@ import { PublicModule } from './public/public.module';
 import { SecureModule } from './secure/secure.module';
 import { CredentialInterceptor } from './interceptors/credential.interceptor';
 import { AuthService } from './services/auth.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { AuthService } from './services/auth.service';
     PublicModule,
     SecureModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     {

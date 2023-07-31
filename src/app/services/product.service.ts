@@ -2,15 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from 'src/app/interfaces/user';
+import { Product } from '../interfaces/product';
 
 @Injectable({
   providedIn: 'root',
 })
-export class UsersService {
-  constructor(private httpClient: HttpClient) {}
+export class ProductService {
+  constructor(private http: HttpClient) {}
 
-  users(): Observable<any> {
-    return this.httpClient.get(`${environment.api}/ambassadors`);
+  products(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${environment.api}/products`);
   }
 }

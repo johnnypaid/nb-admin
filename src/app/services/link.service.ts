@@ -2,15 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from 'src/app/interfaces/user';
+import { Link } from '../interfaces/link';
 
 @Injectable({
   providedIn: 'root',
 })
-export class UsersService {
-  constructor(private httpClient: HttpClient) {}
+export class LinkService {
+  constructor(private http: HttpClient) {}
 
-  users(): Observable<any> {
-    return this.httpClient.get(`${environment.api}/ambassadors`);
+  links(id: number): Observable<Link[]> {
+    return this.http.get<Link[]>(`${environment.api}/users/${id}/links`);
   }
 }

@@ -1,5 +1,5 @@
 import { EventEmitter } from '@angular/core';
-import { User } from 'src/interfaces/user';
+import { User } from 'src/app/interfaces/user';
 
 export class Emitters {
   static authEmitter = new EventEmitter<User>();
