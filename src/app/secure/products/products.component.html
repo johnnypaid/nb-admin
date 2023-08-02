@@ -1,3 +1,9 @@
+<div>
+  <a [routerLink]="['/products/create']" mat-stroked-button color="primary"
+    >Add</a
+  >
+</div>
+
 <table
   mat-table
   [dataSource]="dataSource"
@@ -42,12 +48,14 @@
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef>Actions</th>
     <td mat-cell *matCellDef="let element">
-      <a
-        [routerLink]="['/users', element.id, 'links']"
-        mat-stroked-button
-        color="primary"
-        >View</a
-      >
+      <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+        <mat-button-toggle [routerLink]="['/products', element.id, 'edit']"
+          >Edit</mat-button-toggle
+        >
+        <mat-button-toggle (click)="delete(element.id)"
+          >Delete</mat-button-toggle
+        >
+      </mat-button-toggle-group>
     </td>
   </ng-container>
 

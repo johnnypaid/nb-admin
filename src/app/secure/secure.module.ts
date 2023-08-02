@@ -12,6 +12,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { LinksComponent } from './links/links.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ProductsComponent } from './products/products.component';
+import { ProductsFormComponent } from './products/products-form/products-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,7 @@ import { ProductsComponent } from './products/products.component';
     UsersComponent,
     LinksComponent,
     ProductsComponent,
+    ProductsFormComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +35,9 @@ import { ProductsComponent } from './products/products.component';
     MatTableModule,
     MatPaginatorModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonToggleModule,
   ],
 })
 export class SecureModule {}
