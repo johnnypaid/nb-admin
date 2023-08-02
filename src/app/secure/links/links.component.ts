@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Console } from 'console';
+import { Order } from 'src/app/interfaces/order';
 import { LinkService } from 'src/app/services/link.service';
 
 @Component({
@@ -27,12 +28,7 @@ export class LinksComponent implements OnInit {
     });
   }
 
-  sum(orders: any[]) {
-    console.log(orders);
-
-    if (orders.length > 0) {
-      console.log(orders.reduce((s, o) => s + o.order_items.admin_revenue, 0));
-      return orders.reduce((s, o) => s + o.orders_items, 0);
-    }
+  sum(orders: Order[]): number {
+    return orders.reduce((s, o) => s + o.total, 0);
   }
 }

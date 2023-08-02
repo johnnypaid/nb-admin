@@ -16,6 +16,8 @@ import { ProductsFormComponent } from './products/products-form/products-form.co
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { OrdersComponent } from './orders/orders.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     LinksComponent,
     ProductsComponent,
     ProductsFormComponent,
+    OrdersComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +41,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatFormFieldModule,
     MatInputModule,
     MatButtonToggleModule,
+    MatExpansionModule,
   ],
 })
 export class SecureModule {}
